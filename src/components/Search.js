@@ -5,14 +5,12 @@ function Search({ listings, setListings, searchedListings, setSearchedListings }
   function handleSubmit(e) {
     e.preventDefault();
 
-    const searchInput = e.target.search.value
+    const searchInput = (e.target.search.value).toString()
 
     const newArray = listings.filter((each) => {
-      return searchInput === each.description
+      return each.description.includes(searchInput)
     })
-
-    console.log(newArray)
-
+    
     setSearchedListings(newArray)
 
   }

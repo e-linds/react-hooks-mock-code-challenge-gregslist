@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="app">
       <Header listings={listings} setListings={setListings} searchedListings={searchedListings} setSearchedListings={setSearchedListings}/>
-      <ListingsContainer listings={searchedListings} setListings={setListings} deleteListing={deleteListing}/>
+      <ListingsContainer listings={listings} setListings={setListings} searchedListings={searchedListings} setSearchedListings={setSearchedListings} deleteListing={deleteListing}/>
     </div>
   );
 }

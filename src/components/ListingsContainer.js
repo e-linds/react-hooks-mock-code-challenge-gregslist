@@ -1,11 +1,12 @@
 import React from "react";
 import ListingCard from "./ListingCard";
 
-function ListingsContainer({ listings, setListings, deleteListing }) {
+function ListingsContainer({ listings, searchedListings, setListings, deleteListing }) {
+
   return (
     <main>
       <ul className="cards">
-        {listings.map((each) => {
+        {searchedListings.map((each) => {
           return <ListingCard 
           key={each.id} 
           id={each.id} 
